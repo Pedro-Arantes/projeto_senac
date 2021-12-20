@@ -2,9 +2,9 @@
 include('conexao.php');
 
 try{
-    $sql = "SELECT * from tblreserva";
+    $sql = "SELECT * from tblconsulta";
     $qry = $con->query($sql);
-    $reserva = $qry->fetchAll(PDO::FETCH_OBJ);
+    $consulta = $qry->fetchAll(PDO::FETCH_OBJ);
     //echo "<pre>";
     //print_r($clientes);
     //die();
@@ -22,53 +22,45 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Listar Reservas</title>
+    <title>Listar Vendas</title>
 </head>
 <body>
-<div class="container">
-<h1>Lista de Reservas</h1>
+    
+<h1>Lista de Consultas</h1>
 <hr>
-<a class="btn btn-outline-success" href="frmreserva.php">Nova Reserva</a>
-<a  class="btn btn-outline-secondary" href="logar/administrador.php">home</a>
+<a class="btn btn-outline-success" href="frmconsultapa.php">Nova Consulta</a>
+<a  class="btn btn-outline-secondary" href="logar/paciente.php">home</a>
 <hr>
-<table class="table table-dark table-striped">
+<table class="table table-dark table-striped ">
     <thead>
         <tr>
-           <th>id reserva</th>
-           <th>id profissional</th>
-           <th>Sala</th>
-           <th>Data</th>  
-           <th>Hora</th>
+           <th>id consulta</th>
+           <th>Data da Consulta</th>
+           <th>Hora da Consulta</th>  
+           <th>id do paciente</th>
+           <th>id do profissional</th>
+           <th>id do Serviço</th>
            
-           
-           <th colspan=2>Ações</th>
+          
            
         </tr>
     </thead>
     <tbody>
-        <?php foreach($reserva as $reserva) { ?>
+        <?php foreach($consulta as $consulta) { ?>
         <tr>
-            <td><?php echo $reserva->idreserva ?></td>
-            <td><?php echo $reserva->idprof ?></td>
+            <td><?php echo $consulta->idconsulta ?></td>
+            <td><?php echo date ("d,m,y",strtotime($consulta->dataconsulta)) ?></td>
+            <td><?php echo $consulta->horaconsulta ?></td>
+            <td><?php echo $consulta->idpaciente ?></td>
+            <td><?php echo $consulta->idprof ?></td>
+            <td><?php echo $consulta->idservico ?></td>
             
-            <td><?php echo $reserva->sala ?></td>
-            <td><?php echo $reserva->datareserva ?></td>
-            <td><?php echo $reserva->horareserva ?></td>
-            
-            
-            <td><a class="btn btn-outline-warning" href="frmreserva.php?idreserva=<?php echo $reserva->idreserva ?>">Editar</a></td>
-            <td><a class="btn btn-outline-danger" href="frmreserva.php?op=del&idreserva=<?php echo  $reserva->idreserva ?>">Excluir</a></td>
 
         </tr>
         <?php } ?>
     </tbody>
 </table>
-</div>    
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </html>
-
-
-</body>

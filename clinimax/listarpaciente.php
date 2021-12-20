@@ -30,7 +30,7 @@ try{
     <h1>Lista de Pacientes</h1>
 <hr>
 <a  class="btn btn-outline-success" href="frmpaciente.php">Novo Cadastro</a>
-<a  class="btn btn-outline-secondary" href="index.php">home</a>
+<a  class="btn btn-outline-secondary" href="logar/administrador.php">home</a>
 <hr>
 <table class="table table-dark table-striped ">
     <thead>

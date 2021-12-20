@@ -20,7 +20,7 @@ try{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Listar Vendas</title>
 </head>
@@ -28,10 +28,10 @@ try{
     
 <h1>Lista de Consultas</h1>
 <hr>
-<a href="frmconsulta.php">Nova Consulta</a>
-<a  class="btn btn-outline-secondary" href="logar/administrador.php">home</a>
+<a class="btn btn-outline-success" href="frmconsulta1.php">Nova Consulta</a>
+<a  class="btn btn-outline-secondary" href="logar/ceo.php">home</a>
 <hr>
-<table border=1>
+<table class="table table-dark table-striped ">
     <thead>
         <tr>
            <th>id consulta</th>
@@ -54,12 +54,14 @@ try{
             <td><?php echo $consulta->idpaciente ?></td>
             <td><?php echo $consulta->idprof ?></td>
             <td><?php echo $consulta->idservico ?></td>
-            <td><a href="frmconsulta.php?idconsulta=<?php echo $consulta->idconsulta ?>">Editar</a></td>
-            <td><a href="frmconsulta.php?op=del&idconsulta=<?php echo  $consulta->idconsulta ?>">Excluir</a></td>
+            <td><a class="btn btn-outline-warning" href="frmconsulta1.php?idconsulta=<?php echo $consulta->idconsulta ?>">Editar</a></td>
+            <td><a class="btn btn-outline-danger" href="frmconsulta1.php?op=del&idconsulta=<?php echo  $consulta->idconsulta ?>">Excluir</a></td>
 
         </tr>
         <?php } ?>
     </tbody>
 </table>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </html>

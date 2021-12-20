@@ -2,7 +2,7 @@
 
 $idconsulta = isset($_GET["idconsulta"]) ? $_GET["idconsulta"]: null;
 $op = isset($_GET["op"]) ? $_GET["op"]: null;
-$id = isset($_GET["id"]) ? $_GET["id"]: null;
+
 
  
 
@@ -18,7 +18,7 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
             $stmt = $con->prepare($sql);
             $stmt->bindValue(":idconsulta",$idconsulta);
             $stmt->execute();
-            header("Location:listarconsultas.php");
+            header("Location:listarconsultas1.php");
         }
 
 
@@ -53,7 +53,7 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
                 
                 $stmt->execute(); 
               }
-            //header("Location:listarconsultas.php");
+            header("Location:listarconsultas1.php");
         } 
     } catch(PDOException $e){
          echo "erro".$e->getMessage;
@@ -85,7 +85,7 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="administrador.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="logar/ceo.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -95,10 +95,10 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
             Funcionários
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="frmprof.php">Profissional</a></li>
-            <li><a class="dropdown-item" href="frmreserva.php">Reserva</a></li>
+            <li><a class="dropdown-item" href="frmprof1.php">Profissional</a></li>
+            <li><a class="dropdown-item" href="frmreserva1.php">Reserva</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Consulta</a></li>
+            
           </ul>
         </li>
         <!--Itens separados na navbar-->
@@ -107,11 +107,11 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
             Cliente
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="frmpaciente.php">Paciente</a></li>
-            <li><a class="dropdown-item" href="frmpagamento.php">Pagamento</a></li>
+            <li><a class="dropdown-item" href="frmpaciente1.php">Paciente</a></li>
+            <li><a class="dropdown-item" href="frmpagamento1.php">Pagamento</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="frmservico.php">Serviço</a></li>
-            <li><a class="dropdown-item" href="frmconsulta.php">Consulta</a></li>
+            <li><a class="dropdown-item" href="frmservico1.php">Serviço</a></li>
+            <li><a class="dropdown-item" href="frmconsulta1.php">Consulta</a></li>
           </ul>
         </li>
         
@@ -171,7 +171,7 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
     </div>
   </form>
   <div>
-  <button class="btn btn-outline-info" href="administrador.php">Volta</button>
+  <button class="btn btn-outline-info" href="logar/ceo.php">Volta</button>
   </div>
 </div>
 </body>

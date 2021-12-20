@@ -2,7 +2,7 @@
 
 $idconsulta = isset($_GET["idconsulta"]) ? $_GET["idconsulta"]: null;
 $op = isset($_GET["op"]) ? $_GET["op"]: null;
-$id = isset($_GET["id"]) ? $_GET["id"]: null;
+
 
  
 
@@ -18,7 +18,7 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
             $stmt = $con->prepare($sql);
             $stmt->bindValue(":idconsulta",$idconsulta);
             $stmt->execute();
-            header("Location:listarconsultas.php");
+            header("Location:listarconsultapa.php");
         }
 
 
@@ -53,7 +53,7 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
                 
                 $stmt->execute(); 
               }
-            //header("Location:listarconsultas.php");
+              header("Location:listarconsultapa.php");
         } 
     } catch(PDOException $e){
          echo "erro".$e->getMessage;
@@ -85,33 +85,32 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="administrador.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="logar/paciente.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Funcionários
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="frmprof.php">Profissional</a></li>
-            <li><a class="dropdown-item" href="frmreserva.php">Reserva</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Consulta</a></li>
-          </ul>
-        </li>
+       
+        
         <!--Itens separados na navbar-->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Cliente
+            Paciente
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="frmpaciente.php">Paciente</a></li>
-            <li><a class="dropdown-item" href="frmpagamento.php">Pagamento</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="frmservico.php">Serviço</a></li>
-            <li><a class="dropdown-item" href="frmconsulta.php">Consulta</a></li>
+            
+
+            <li><a class="dropdown-item" href="listarprofissionalpa.php">Listar Profissional</a></li>
+            <li><a class="dropdown-item" href="listarservicopa.php">Listar Serviço</a></li>
+            <li><a class="dropdown-item" href="listarconsultapa.php">Listar Consulta</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Cadastro
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <li><a class="dropdown-item" href="frmpagamentopa.php">Pagamento</a></li>
+            
+            <li><a class="dropdown-item" href="frmconsultapa.php">Consulta</a></li>
           </ul>
         </li>
         
@@ -170,9 +169,7 @@ $id = isset($_GET["id"]) ? $_GET["id"]: null;
       
     </div>
   </form>
-  <div>
-  <button class="btn btn-outline-info" href="administrador.php">Volta</button>
-  </div>
+  
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

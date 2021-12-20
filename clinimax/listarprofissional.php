@@ -29,6 +29,7 @@ try{
 <h1>Lista de Profissionais</h1>
 <hr>
 <a  class="btn btn-outline-success"href="frmprof.php">Novo Cadastro</a>
+<a  class="btn btn-outline-secondary" href="logar/administrador.php">home</a>
 <hr>
 <table class="table table-dark table-striped">
     <thead>

@@ -16,7 +16,7 @@ $op = isset($_GET["op"]) ? $_GET["op"]: null;
             $stmt = $con->prepare($sql);
             $stmt->bindValue(":idpaciente",$idpaciente);
             $stmt->execute();
-            header("Location:listarpaciente.php");
+            header("Location:listarpaciente1.php");
         }
 
 
@@ -52,7 +52,7 @@ $op = isset($_GET["op"]) ? $_GET["op"]: null;
             $stmt->bindValue(":cel",$_POST["cel"]);
             $stmt->execute(); 
           }
-          header("Location:listarpaciente.php");
+          header("Location:listarpaciente1.php");
       } 
     } catch(PDOException $e){
          echo "erro".$e->getMessage;
@@ -86,20 +86,20 @@ $op = isset($_GET["op"]) ? $_GET["op"]: null;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Pagina Inicial</a>
+          <a class="nav-link active" aria-current="page" href="logar/ceo.php">Pagina Inicial</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="listarpaciente.php">Link</a>
+          <a class="nav-link" href="listarpaciente1.php">Link</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Funcionários
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="frmprof.php">Profissional</a></li>
-            <li><a class="dropdown-item" href="frmreserva.php">Reserva</a></li>
+            <li><a class="dropdown-item" href="frmprof1.php">Profissional</a></li>
+            <li><a class="dropdown-item" href="frmreserva1.php">Reserva</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Consulta</a></li>
+            
           </ul>
         </li>
         <!--Itens separados na navbar-->
@@ -108,11 +108,11 @@ $op = isset($_GET["op"]) ? $_GET["op"]: null;
             Cliente
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="frmpaciente.php">Paciente</a></li>
-            <li><a class="dropdown-item" href="frmpagamento.php">Pagamento</a></li>
+            <li><a class="dropdown-item" href="frmpaciente1.php">Paciente</a></li>
+            <li><a class="dropdown-item" href="frmpagamento1.php">Pagamento</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="frmservico.php">Serviço</a></li>
-            <li><a class="dropdown-item" href="frmconsulta.php">Consulta</a></li>
+            <li><a class="dropdown-item" href="frmservico1.php">Serviço</a></li>
+            <li><a class="dropdown-item" href="frmconsulta1.php">Consulta</a></li>
           </ul>
         </li>
         
@@ -185,7 +185,7 @@ $op = isset($_GET["op"]) ? $_GET["op"]: null;
   </form>
   
 </div>
-<a class="btn btn-outline-info" href="logar/administrador.php">volta</a>
+<a class="btn btn-outline-info" href="logar/ceo.php">volta</a>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

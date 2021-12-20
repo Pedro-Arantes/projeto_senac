@@ -101,7 +101,7 @@ $op = isset($_GET["op"]) ? $_GET["op"]: null;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="administrador.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="logar/ceo.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -111,8 +111,8 @@ $op = isset($_GET["op"]) ? $_GET["op"]: null;
             Funcionários
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="frmprof.php">Profissional</a></li>
-            <li><a class="dropdown-item" href="frmreserva.php">Reserva</a></li>
+            <li><a class="dropdown-item" href="frmprof1.php">Profissional</a></li>
+            <li><a class="dropdown-item" href="frmreserva1.php">Reserva</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Consulta</a></li>
           </ul>
@@ -123,11 +123,11 @@ $op = isset($_GET["op"]) ? $_GET["op"]: null;
             Cliente
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="frmpaciente.php">Paciente</a></li>
-            <li><a class="dropdown-item" href="frmpagamento.php">Pagamento</a></li>
+            <li><a class="dropdown-item" href="frmpaciente1.php">Paciente</a></li>
+            <li><a class="dropdown-item" href="frmpagamento1.php">Pagamento</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="frmservico.php">Serviço</a></li>
-            <li><a class="dropdown-item" href="frmconsulta.php">Consulta</a></li>
+            <li><a class="dropdown-item" href="frmservico1.php">Serviço</a></li>
+            <li><a class="dropdown-item" href="frmconsulta1.php">Consulta</a></li>
           </ul>
         </li>
         
